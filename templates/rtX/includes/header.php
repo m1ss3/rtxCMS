@@ -16,6 +16,7 @@ global $rtX;
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- Tum CSS'ler -->
 	<link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/style/css/index.css?<?= time() ?>">
@@ -41,10 +42,6 @@ global $rtX;
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="/news/">News</a></li>
 							<li><a class="dropdown-item" href="/staff">Staffs</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
@@ -52,12 +49,22 @@ global $rtX;
 					</li>
 				</ul>
 				<form class="d-flex" role="search">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success" type="submit">Search</button>
+					<a class="nav-link" style="color:red !important;" href="/logout">Logout</a>
 				</form>
 			</div>
 		</div>
 	</nav>
+	<div class="image-component">
+		<div class="my-component">
+			<img class="img-shadow" src="<?= $rtX['rtXLookPath'] . User::userData('look') ?>&size=l&head_direction=3&direction=2&action=wlk&gesture=sml" alt="<?= User::userData('username') ?>'s Avatar">
+			<div class="currencies">
+				<div class="currency"><img src="<?= $rtX['imagePath'] ?>credits.png"> : <?= User::userData('credits') ?></div>
+				<div class="currency"> <img src="<?= $rtX['imagePath'] ?>duckets.png"> : <?= User::userData('activity_points') ?></div>
+				<div class="currency"><img src="<?= $rtX['imagePath'] ?>diamonds.png" style="margin-top: -3px;"> : <?= User::userData('vip_points') ?></div>
+			</div>
+		</div>
+		<div class="page-info"><?= User::userData('username')  . ' <span style="font-size:20px;">〰</span> ' . $page ?></div>
+	</div>
 </body>
 
 </html>

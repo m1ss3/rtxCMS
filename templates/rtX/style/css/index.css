@@ -7,6 +7,7 @@ body {
     font-weight: normal;
     background: #424242;
     color: gray;
+    overflow-x: hidden;
 }
 
 .avatar {
@@ -31,9 +32,73 @@ body {
 
 .dropdown-menu {
     font-size: 14px;
+    margin-top: 8px !important;
 }
 
 .navbar {
     background: #363838;
     border-bottom: 3px solid #545454;
+}
+
+.nav-link {
+    color: #e7e7e7 !important;
+}
+
+.image-component {
+    background: url(https://2.bp.blogspot.com/-n52BQDEtZSs/XS_tBOsjshI/AAAAAAABSe8/2A7Ywa_DYFIZjm7cXDMtm6FFbCJocvsYwCKgBGAs/s1600/feature_cata_hort_house18_comeback.png);
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    image-rendering: pixelated;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-component:before {
+    background-image: url(../images/rtx/pattern.png);
+    background-color: rgba(54, 56, 56, .88);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.my-component {
+    position: absolute;
+    display: flex;
+}
+
+
+.currencies {
+    margin-top: 65px;
+    color: #fff;
+}
+
+.currency {
+    background-color: #36383896;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+.page-info {
+    z-index: 999999;
+    position: relative;
+    top: 50%;
+    right: 6%;
+    transform: translate(50%, -50%);
+    text-shadow: 0 1px 0 rgb(0 0 0 / 30%);
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.img-shadow {
+    -webkit-filter: drop-shadow(1px 1px 0 #fff) drop-shadow(-1px 1px 0 #fff) drop-shadow(0 -1px 0 #fff);
 }

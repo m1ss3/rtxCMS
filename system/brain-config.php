@@ -95,7 +95,8 @@ $config['vipBadge'] = "vip";
 
 $rtX = [
 	'rtXPath' => '/inetpub/wwwroot/rtxCMS/templates/rtX/',
-	'rtXLookPath' => 'https://habnet.io/imaging/img.php?figure='
+	'rtXLookPath' => 'https://habnet.io/imaging/img.php?figure=',
+	'imagePath' => '/templates/rtX/style/images/rtx/'
 ];
 
 
